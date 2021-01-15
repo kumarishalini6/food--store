@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+            margin: 0;
+            padding: 0;
+            background-image: url(/img/back.jpg);
+            background-size: cover;
+        }
+        .box1{
+            background-color: azure;
+            height: 520px;
+            width: 550px;
+            margin-top: 100px;
+            margin-left: 460px;
+        }
+        img{
+            
+            margin-left: 28%;
+        }
+        h1{
+            margin-left: 50%;
+           margin-top: -16%;
+           font-weight: bolder;
+           font-size: 60px;
+        }
+        .lab1{
+            font-size: 35px;
+            margin-left: 10%;
+        }
+        #name{
+            font-size: 20px;
+            border-radius: 4px;
+            margin-left: 10%;
+            width: 380px;
+
+        }
+        #email{
+            font-size: 20px;
+            border-radius: 4px;
+            margin-left: 10%;
+            width: 380px;
+        }
+        #psw1{
+            font-size: 20px;
+            border-radius: 4px;
+            margin-left: 10%;
+            width: 380px;
+        }
+        #psw2{
+            font-size: 20px;
+            border-radius: 4px;
+            margin-left: 10%;
+            width: 380px;
+        }
+        #reg{
+            font-size: 25px;
+            border-radius: 4px;
+            margin-left: 10%;
+            width: 390px;
+            background-color:rgb(161, 28, 72);
+        }
+        h3{
+            margin-left: 14%;
+        }
+    </style>
+</head>
+<body>
+   <div class="box1">
+       <div class="img1">
+          
+           <img src="/img/reg2.png">
+           <h1>Register</h1>
+       </div>
+       <form  method="POST" action="/users/code">
+           <label class="lab1">Name</label><br>
+           <input id="name" type="text" name="t1" placeholder="Enter Your Name">
+           <br>
+           <label class="lab1">Email</label><br>
+           <input id="email" type="text" name="t2" placeholder="Enter Your Email">
+           <br>
+           <label class="lab1">Password</label><br>
+           <input id="psw1" type="text" name="t3" placeholder="Enter Your Password">
+           <br>
+           <label class="lab1">Confirm Password</label><br>
+           <input id="psw2" type="text" name="t4" placeholder="Enter Your Confirm Password">
+           <br> <br>
+           <input id="reg" type="submit" value="Register">
+           <h3>Have An Account ? <a href="/users/login">Login</a></h3>
+           <div style="color: aqua; font-size: 40px;">
+          
+    </div>
+       </form>
+   </div>
+</body>
+</html>

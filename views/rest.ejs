@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+         body{
+            margin: 0px;
+            padding: 0px;
+           box-sizing: border-box;
+         }
+         html{
+            font-size: 20px;
+            font-weight: bolder;
+            font-family:Arial, Helvetica, sans-serif;}
+           a{
+              text-decoration: none;
+           } 
+           .container{
+               min-height: 100vh;
+               width: 100%;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+           }
+           img{
+               height: 100%;
+               width: 100%;
+               object-fit: cover;
+           }
+           
+            
+           #bg{
+            background-image: url(/img/de.jpg);
+            background-size: cover;
+            background-position:top center;
+            position: relative;
+            z-index: 1;
+           }
+           #bg::after{
+                  content: '';
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                  height: 100%;
+                  width: 100%;
+                  background-color: black;
+                  opacity: .5;
+                  z-index: -1;
+           }
+           #bg h1{
+               display: block;
+               width: fit-content;
+               font-size: 4rem;
+               position: relative;
+               color: transparent;
+               animation: text .5s ease forwards;
+               animation-delay: 0.5s;
+           }
+           
+           #bg h1 span{
+               position: absolute;
+               top: 0;
+               left: 0;
+               height: 100%;
+               width: 0;
+               background-color: red;
+               animation: text_box 1s ease;
+               animation-delay: .5s;
+            }
+            @keyframes text_box{
+                50%{
+                    width: 100%;
+                    left: 0;
+                }
+                100%{
+                    width: 0;
+                    left: 100%;
+                }
+            }
+            @keyframes text{
+                100%{
+                    color: white;
+                }
+            }
+           
+           
+            #service .service{
+                flex-direction: column;
+                text-align: center;
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 90px 0;
+            }
+            #service .section-title{
+                font-size: 4rem;
+                font-weight: 300px;
+                color: black;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+                letter-spacing: .2rem;
+                text-align: center;
+            }
+            #service .section-title span{
+                color: red;
+            }
+            #service .service-top p{
+                font-size: 17px;
+                margin-top: 5px;
+                line-height: 2rem;
+                font-weight: 200px;
+                letter-spacing: .05rem;
+            }
+            #service .service-bottom{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            #service .service-item{
+                flex-basis: 98%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                flex-direction: column;
+                padding: 20px;
+                border-radius: 10px;
+               background-image: url(/img/bg.jpg);
+               background-size: cover;
+               background-position: center;
+               margin: 10px 5px;
+               position: relative;
+               z-index: 1;
+            }
+            #service .service-item::after{
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                background-image: linear-gradient(60deg,#29323c 0%,#485563 100%);
+                opacity: 0.6;
+                z-index: -1;
+            }
+           #service .service-item h2{
+               font-size: 1.4rem;
+               color: white;
+               margin-bottom: 10px;
+               text-transform: uppercase;
+
+           }
+           #service .service-item p{
+               color: white;
+               text-align: left;
+               font-size: 1rem;
+               line-height: 1.9rem;
+           }
+           #about .about{
+               flex-direction: column-reverse;
+               text-align: center;
+               max-width: 1200px;
+               margin: 0 auto;
+               padding: 100px 20px;
+           }
+           #about .col-left{
+               width: 250px;
+               height: 360px;
+           }
+           #about .col-right{
+               width: 100%;
+           }
+           #about .col-right .section-title{
+               font-size: 2.5rem;
+              
+           }
+           #about .col-right h2{
+               font-size: 1.5rem;
+               font-weight: 300px;
+               letter-spacing: .1rem;
+               margin: 10px;
+           }
+           #about .col-right p{
+                  margin-bottom: 10px;
+              }
+              .section-title span{
+                color: red;
+            }
+           .btn {
+               display: inline-block;
+               padding: 5px 10px;
+               color: white;
+               background-color: transparent;
+               border: 2px solid red;
+               font-size: 2rem;
+               text-transform: uppercase;
+               letter-spacing: .1rem;
+               margin-top: 24px;
+              }
+              
+           .btn:hover{
+               color: white;
+               background-color: red;
+            }
+            #about .col-right .btn{
+                color: black;
+                margin: 50px;
+                padding: 10px 20px;
+                font-size: 2rem;
+            }
+            #about .col-left .about-img{
+                height: 100%;
+                width: 100%;
+                position: relative;
+                border: 9px solid white;
+                
+            }
+            #about .col-left .about-img::after{
+                content: '';
+                position: absolute;
+                left: -33px;
+                top: 27px;
+                height: 98%;
+                width: 98%;
+                border: 9px solid red;
+                z-index: -1;
+            }
+            
+             .section-title span{
+                color: red;
+            }
+            #contect .contect{
+                flex-direction: column;
+                
+            }
+            #contect .contect-items{
+                width: 60%;
+            }
+            #contect .contact-item{
+               width: 80%;
+               padding: 20px;
+               text-align: center;
+               border-radius: 20px;
+               padding: 10px;
+               margin: 100px;
+               display: flex;
+               justify-content: center;
+               flex-direction: column;
+               box-shadow: 0px 0px 18px 0 #0000002c;
+               transition: .3s ease  box-shadow;
+            }
+            #contect .contact-item:hover{
+               box-shadow: 0px 0px 5px 0 #0000002c;
+            }
+            #contect .icon{
+                width: 100px;
+                margin: 0 auto;
+                margin-bottom: 10px;
+            }
+            #contect .contact-info h1{
+                font-size: 40px;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+            #contect .contact-info h2{
+                font-size: 25px;
+                font-weight: bold;
+                margin-bottom: 5px;
+                line-height: 2rem;
+            }
+            @media only screen and(min-width: 770px){
+                
+                
+
+                .btn{
+                    font-size: 2.5rem;
+                    padding: 20px 60px;
+                }
+                h1.section-title{
+                    font-size: 4rem;
+                }
+            }
+           #header{
+               position: fixed;
+               z-index: 1000;
+               left: 0;
+               top: 0;
+               width: 100vw;
+               height: auto;
+           }
+            #header .header{
+                min-height: 5vh;
+                background-color: rgba(31, 30, 30, 0.25);
+            }
+            #header .nav-bar{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                height: 100%;
+                min-width: 1300px;
+                padding: 0 10px;
+            }
+            #header .nav-list li{
+                display: inline-block;
+                line-height: 80px;
+                margin: 0 7px;
+            }
+            #header .nav-list li a{
+                color: white;
+                font-size: 20px;
+                text-transform: uppercase;
+            }
+            
+              
+    </style>
+</head>
+<body>
+    <section id="header">
+    <div class="header container">
+        <div class="nav-bar">
+            <div class="brand">
+                <a href="#bg"><h1 style="color: white;">RES<span style="color: red;">TUR</span>ENT</h1></a>
+            </div>
+            <div class="nav-list">
+                <div class="hamburg"><div class="bar"></div></div>
+                <ul>
+                    <li><a class="active" href="#header" >Home</a></li>
+                    <li><a href="#service" >Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contect" >Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>    
+    </section>
+    <section id="bg">
+        <div class="bg container">
+            
+            <div>
+                <h1>Best Desert<span></span></h1>
+                <h1>Available Here<span></span></h1>
+                <a href="#" type="button" class="btn">Order Now</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="service">
+     <div class="service">
+         <div class="service container">
+             <div class="service-top">
+             <h1 class="section-title" >SERV<span>I</span>CES</h1>
+                <p>The food during this service is prepared tableside. Hot foods are cooked on a rechaud (hot plate) that is on a gueridon (small table). 
+                    Cold foods, such as Caesar Salad, are assembled on just the gueridon. Servers plate the finished foods onto individual plates and serve them to guests from the right.
+                    (This is the only style of service where food is served from the right).
+                    Some foods, such as desserts, may already be prepared. 
+                    They are displayed on a cart, the cart is rolled to tableside and guests are served after making their selections.
+                    This style would only be used for small VIP groups.</p>
+                </div>
+                <div class="service-bottom"></div>
+                <div class="service-item">
+                    <div class="icon"><img src="/img/icon2.jpg"></div>
+                    <h2>Resturent</h2>
+                    <p>The food during this service is prepared tableside. Hot foods are cooked on a rechaud (hot plate) that is on a gueridon (small table). 
+                        Cold foods, such as Caesar Salad, are assembled on just the gueridon. 
+                        
+                        </p>
+                </div>
+                <br>
+                <div class="service-item">
+                    <div class="icon"><img src="/img/icon2.jpg"></div>
+                    <h2>Resturent</h2>
+                    <p>The food during this service is prepared tableside. Hot foods are cooked on a rechaud (hot plate) that is on a gueridon (small table). 
+                        Cold foods, such as Caesar Salad, are assembled on just the gueridon. 
+                        </p>
+                </div>
+     </div>
+    </section>
+    <section id="about">
+        <div class="about container">
+            <div class="col-left">
+                <div class="about-img">
+                    <img src="/img/rest1.jpg" alt="img">
+                </div>
+            </div>
+            <div class="col-right">
+                <h1 class="section-title" style="font-size:60px; font-weight:bolder;">AB<span>O</span>UT</h1>
+                <h2>About Resturent owner</h2>
+                <p>Restaurant owners are responsible for the daily operations of a restaurant as well as 
+                its overall direction, profitability, and reputation. 
+                In any case, they spend much of their time supervising employees, directing operations, 
+                and finding ways to adapt to customers and industry trends. 
+                They are displayed on a cart, the cart is rolled to tableside and guests are served after making their selections.
+                This style would only be used for small VIP groups.</p>
+                <a href="#" class="btn">Download Resume</a>
+            </div>
+        </div>
+
+    </section>
+    <section id="contect">
+        <div class="contect container">
+            <div><h1 class="section-title" style="font-size:60px; font-weight:bolder;">CONTACT    <span>INFO</span></h1></div>
+            <div class="contect-items">
+                <div class="contact-item">
+                    <div class="icon"><img src="/img/phone1.png"></div>
+                    <div class="contact-info">
+                        <h1>Phone</h1>
+                        <h2>+126 475 8959</h2>
+                        <h2>+678 4567 5678</h2>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon"><img src="/img/email2.png"></div>
+                    <div class="contact-info">
+                        <h1>Email</h1>
+                        <h2>abc1234@gmail.com</h2>
+                        <h2>mnb9877@gmail.com</h2>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon"><img src="/img/addr2.jpg"></div>
+                    <div class="contact-info">
+                        <h1>Address</h1>
+                        <h2>tcp takenpur gwalior</h2>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    
+</body>
+</html>

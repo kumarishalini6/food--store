@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-image: url(/img/back.jpg);
+           
+           
+            background-size: cover;
+        }
+        .box1{
+            background-color: azure;
+            height: 310px;
+            width: 700px;
+            margin-top: 180px;
+            margin-left: 400px;
+        }
+        img{
+            
+            margin-left: 43%;
+        }
+        h2{
+            margin-left: 32%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #btn1{
+            margin-left: 10%;
+            width: 550px;
+            font-size: 30px;
+            font-weight: bold;
+            border-radius: 5px;
+            background-color:rgb(161, 28, 72);
+        }
+        #btn2{
+            margin-left: 10%;
+            width: 550px;
+            font-size: 30px;
+            font-weight: bold;
+            border-radius: 5px;
+            background-color:silver;
+        }
+        .label{
+            font-size: 40px;
+            font-weight: bolder;
+            color: white;
+            margin-left: 30%;
+            width: 700px;
+            height: 50px;
+        }
+        
+    </style>
+</head>
+<body>
+    <label class="label">Node.js With Passport Authentication</label>
+   <div class="box1">
+       <div class="img1">
+           <img src="/img/front.png">
+           <h2>Creat an account or login</h2>
+           <form method="POST" action="/users/abc">
+               <input type="submit" id="btn1" value="Register">
+           </form>
+           <br>
+           <form method="POST" action="/users/bcd">
+            <input type="submit" id="btn2" value="Login">
+        </form>
+       </div>
+   </div>
+</body>
+</html>

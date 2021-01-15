@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Login Window</h1>
+    <form method="POST" action="/users/log">
+        Email: <input type="text" name="a1" placeholder="enter your email"><br>
+
+        Password: <input type="text" name="a2" placeholder="enter your password"><br>
+
+        <input type="submit" value="log in"><br>
+        <a href="/users/google">Login By Google</a>
+    </form>
+</body>
+</html>
